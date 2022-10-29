@@ -8,7 +8,7 @@ let mybtn = document.getElementById("myButton");
 
 let winer = document.getElementsByClassName("who-win")[0];
 
-mybtn.onclick = function () {
+mybtn.onclick = () => {
   winer.setAttribute("class", "change");
 
   random1 = Math.floor(Math.random() * 6 + 1);
