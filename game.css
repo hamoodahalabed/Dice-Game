@@ -21,11 +21,6 @@ img {
   margin: 5rem;
 }
 
-span {
-  margin-left: 10rem;
-  margin-right: 10rem;
-}
-
 .container {
   width: 70%;
   margin: auto;
@@ -51,4 +46,12 @@ span {
 #myButton:active {
   position: relative;
   top: 1px;
+}
+
+.dive {
+  display: inline-block;
+}
+
+.change {
+  font-size: 4rem;
 }
