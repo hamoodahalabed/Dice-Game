@@ -6,7 +6,11 @@ let player2Con = 0;
 
 let mybtn = document.getElementById("myButton");
 
+let winer = document.getElementsByClassName("who-win")[0];
+
 mybtn.onclick = function () {
+  winer.setAttribute("class", "change");
+
   random1 = Math.floor(Math.random() * 6 + 1);
   random2 = Math.floor(Math.random() * 6 + 1);
 
@@ -14,19 +18,14 @@ mybtn.onclick = function () {
   document.getElementById("img2").src = `images/dice${random2}.png`;
 
   if (random1 > random2) {
-    document.getElementsByClassName(
-      "who-win"
-    )[0].textContent = `Player ${1} Win 🎉🎉.`;
+    winer.textContent = `🚩 Player ${1} Win.`;
     player1Con++;
   }
   if (random1 < random2) {
-    document.getElementsByClassName(
-      "who-win"
-    )[0].textContent = `Player ${2} Win 🎉🎉.`;
+    winer.textContent = `Player ${2} Win 🚩.`;
     player2Con++;
   }
-  if (random1 === random2)
-    document.getElementsByClassName("who-win")[0].textContent = `Drow 🙂.`;
+  if (random1 === random2) winer.textContent = `Drow 🙂.`;
 
   document.getElementById(
     "result"
