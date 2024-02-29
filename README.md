@@ -1,1 +1,2 @@
-# my-game
+# Simple Dice Game 
+using javascript 
